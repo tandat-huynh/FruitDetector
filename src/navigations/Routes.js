@@ -2,7 +2,9 @@ import {createStackNavigator} from 'react-navigation-stack';
 import getSlideFromRightTransitionConfig from '../utils/transitionConfig';
 import HomeComponent from '../components/home/home-component';
 import CaptureComponent from '../components/captureScreen/capture-component';
-import ResultComponent from "../components/resultScreen/result-component";
+import ResultComponent from '../components/resultScreen/result-component';
+import PredictionComponent from '../components/prediction/prediction-component';
+import InputQuantityComponent from '../components/InputQuantity/InputQuantity';
 
 const RootNavigator = createStackNavigator(
   {
@@ -25,10 +27,24 @@ const RootNavigator = createStackNavigator(
         gesturesEnabled: false,
       },
     },
+
+    PredictionScreen: {
+      screen: PredictionComponent,
+      navigationOptions: {
+        gesturesEnabled: false,
+      },
+    },
+
+    InputQuantityScreen: {
+      screen: InputQuantityComponent,
+      navigationOptions: {
+        gesturesEnabled: false,
+      },
+    },
   },
 
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'InputQuantityScreen',
     headerMode: 'none',
     mode: 'modal',
     transitionConfig: getSlideFromRightTransitionConfig,

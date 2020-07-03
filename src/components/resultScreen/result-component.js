@@ -46,7 +46,6 @@ class ResultComponent extends Component {
             color: 'white',
             textAlign: 'center',
             fontSize: 40,
-
           }}>
           {'Pineapple'.toUpperCase()}
         </Text>
@@ -89,7 +88,8 @@ class ResultComponent extends Component {
           style={{
             position: 'absolute',
             bottom: 0,
-          }}>
+          }}
+          onPress={() => this.props.navigation.navigate('Home')}>
           <Text
             style={{
               fontWeight: 'bold',
